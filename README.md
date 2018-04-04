@@ -1,0 +1,2 @@
+# XYSM
+XYCM Class Schedule
