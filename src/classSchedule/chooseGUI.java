@@ -13,7 +13,10 @@ import javax.swing.JPanel;
 import org.junit.Test;
 
 /**
- * 思路： 1：设计GUI选择临床or麻醉口腔or八年制 2：预留按钮：理论/实习
+ * 思路： 1：设计第一层GUI选择临床or麻醉口腔or八年制；
+ *       2: 设计第二层GUI选择理论课程/实习课程；
+ *       3：设计第三层GUI选择课程具体日期；
+ *       4：设计第四层GUI选择上午/下午，并调用calculation类进行算法计算并操作GUI和IO流进行本地文件的创建与读写；
  */
 public class chooseGUI extends JFrame implements ActionListener {
 	// 声明课程选择与班级选择按钮
@@ -75,6 +78,7 @@ public class chooseGUI extends JFrame implements ActionListener {
 			selectCourse();
 			String data = button_clinicalClass.getText();
 			calculation.getClss(data);
+			
 		} else if (e.getSource() == button_eightyearsClass) {
 			selectCourse();
 			String data = button_eightyearsClass.getText();
